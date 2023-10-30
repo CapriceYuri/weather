@@ -46,6 +46,10 @@ const currentLocation = document.querySelector(".currentLocation");
 const currentTemp = document.querySelector(".currentTemp");
 const currentTime = document.querySelector(".currentTime");
 const refreshBtn = document.querySelector(".refresh");
+// Data Entry
+const windValue = document.querySelector(".wind-value");
+const humidValue = document.querySelector(".humid-value");
+const weatherIcon = document.querySelector(".weather-icon");
 const apiKey = "077dd367c6a0acb81c8216125b655788";
 const lat = "40.7143";
 const lon = "-74.006";
@@ -59,6 +63,9 @@ function checkWeather() {
         currentTemp.textContent = (data.main.temp).toString() + `°F`;
         let timeRightNow = new Date();
         currentTime.textContent = `Last Updated: ` + timeRightNow.toLocaleTimeString();
+        windValue.textContent = `${data.wind.speed} mph`;
+        humidValue.textContent = `${data.main.humidity}%`;
+        weatherIcon.setAttribute("src", `images/${data.weather[0].icon}.png`);
     });
 }
 checkWeather();
