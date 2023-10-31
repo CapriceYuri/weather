@@ -50,6 +50,8 @@ const refreshBtn = document.querySelector(".refresh");
 const windValue = document.querySelector(".wind-value");
 const humidValue = document.querySelector(".humid-value");
 const weatherIcon = document.querySelector(".weather-icon");
+const sunriseT = document.querySelector(".sunrise-time");
+const sunsetT = document.querySelector(".sunset-time");
 const apiKey = "077dd367c6a0acb81c8216125b655788";
 const lat = "40.7143";
 const lon = "-74.006";
@@ -66,6 +68,15 @@ function checkWeather() {
         windValue.textContent = `${data.wind.speed} mph`;
         humidValue.textContent = `${data.main.humidity}%`;
         weatherIcon.setAttribute("src", `images/${data.weather[0].icon}.png`);
+        let sunriseUnix = data.sys.sunrise;
+        let tempToJS = new Date(sunriseUnix * 1000);
+        let finalized = tempToJS.toLocaleString();
+        let sunsetUnix = data.sys.sunset;
+        let tempToJS2 = new Date(sunsetUnix * 1000);
+        let finalized2 = tempToJS2.toLocaleString();
+        sunriseT.textContent = `${finalized.substring(11, 16)} ${finalized.substring(20)}`;
+        sunsetT.textContent = `${finalized2.substring(11, 16)} ${finalized.substring(20)}`;
+        // sunsetT.textContent = (data.sys.sunset).toLocaleTimeString();
     });
 }
 checkWeather();
