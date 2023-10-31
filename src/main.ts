@@ -50,6 +50,8 @@ const refreshBtn = document.querySelector(".refresh");
 const windValue = document.querySelector(".wind-value") as HTMLElement;
 const humidValue = document.querySelector(".humid-value") as HTMLElement;
 const weatherIcon = document.querySelector(".weather-icon") as HTMLElement;
+const highlowValue = document.querySelector(".high-low-value") as HTMLElement;
+const feelsLike = document.querySelector(".feels-value") as HTMLElement;
 
 const sunriseT = document.querySelector(".sunrise-time") as HTMLElement;
 const sunsetT = document.querySelector(".sunset-time") as HTMLElement;
@@ -57,6 +59,8 @@ const sunsetT = document.querySelector(".sunset-time") as HTMLElement;
 const apiKey = "077dd367c6a0acb81c8216125b655788";
 const lat = "40.7143"
 const lon = "-74.006"
+
+
 
 const forecast = `http://api.openweathermap.org/data/2.5/weather?units=imperial&lat=${lat}&lon=${lon}`
 
@@ -73,6 +77,9 @@ async function checkWeather() {
 
     windValue.textContent = `${data.wind.speed} mph`
     humidValue.textContent = `${data.main.humidity}%`
+
+    feelsLike.textContent = `${data.main["feels_like"]}°F`
+    highlowValue.textContent = `${Math.round(data.main["temp_max"])}°F / ${Math.round(data.main["temp_min"])}°F`
 
     weatherIcon.setAttribute("src", `images/${data.weather[0].icon}.png`)
 

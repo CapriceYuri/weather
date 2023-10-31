@@ -13,68 +13,58 @@
 </head>
 
 <body class="d-flex justify-content-center align-items-center">
-
     <div class="container my-4">
-
         <div class="col-md-8 col-12 mx-auto">
-
+            <!-- Main Content -->
             <div class="card text-center shadow rounded-pill">
-
                 <div class="card-header mx-auto w-75">
                     <div class="h1 fw-bold currentLocation"></div>
                     <span class="currentTime2 text-secondary"></span>
                 </div>
-
-                <div class="card-body d-flex flex-column justify-content-evenly">
-
-                    <div class="d-flex justify-content-evenly align-items-center mb-3">
-
-                        <div class="currentTemp h1 text-primary mb-0 align-self-end"></div>
-                        <div><img class="weather-icon"></div>
-
+                <div class="card-body">
+                    <div class="d-flex justify-content-evenly align-items-center">
+                        <div class="currentTemp text-primary mb-0 text-center"></div>
+                        <div><img class="weather-icon" width="108px" height="auto"></div>
                     </div>
-
-                    <div class="d-flex align-items-start justify-content-evenly">
-
-                        <div>
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wind" viewBox="0 0 16 16">
-                                    <path d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5zm-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2zM0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5z" />
-                                </svg> Wind: <span class="wind-value text-primary"></span>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-water" viewBox="0 0 16 16">
-                                    <path d="M.036 3.314a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 3.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 6.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0L.314 9.964a.5.5 0 0 1-.278-.65zm0 3a.5.5 0 0 1 .65-.278l1.757.703a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.014-.406a2.5 2.5 0 0 1 1.857 0l1.015.406a1.5 1.5 0 0 0 1.114 0l1.757-.703a.5.5 0 1 1 .372.928l-1.758.703a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.014-.406a1.5 1.5 0 0 0-1.114 0l-1.015.406a2.5 2.5 0 0 1-1.857 0l-1.757-.703a.5.5 0 0 1-.278-.65z" />
-                                </svg> Humidity: <span class="humid-value text-primary"></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="d-flex align-items-start justify-content-evenly">
-
-                        <div>
-                            <div><img src="images/sunrise.png">Sunrise: <span class="text-primary sunrise-time"></span></div>
-                        </div>
-                        <div>
-                            <div><img src="images/sunset.png">Sunset: <span class="text-primary sunset-time"></span></div>
-                        </div>
-
-                    </div>
-
                 </div>
-
                 <div class="card-footer text-body-secondary w-75 mx-auto">
                     <button class="refresh btn btn-outline-primary my-1" type="button">Update</button>
                     <div class="currentTime text-secondary"></div>
                 </div>
-
             </div>
 
+            <!-- Secondary Content -->
+            <div class="container mt-4">
+                <div class="card rounded-4 mx-auto text-center">
+                    <div class="card-header fst-italic">Weather Summary:</div>
+                    <div class="card-body">
+                        <div>
+                            <div class="row">
+                                <div class="col-lg-6 col-12 my-1">
+                                    <div class="text-start"><img src="images/HL.png"> High/Low: <span class=" high-low-value text-primary"></span></div>
+                                </div>
+                                <div class="col-lg-6 col-12 my-1">
+                                    <div class="text-start"><img src="images/feel.png"> Feels Like: <span class=" feels-value text-primary"></span></div>
+                                </div>
+                                <div class="col-lg-6 col-12 my-1">
+                                    <div class="text-start"><img src="images/wind.png"> Wind: <span class="wind-value text-primary"></span></div>
+                                </div>
+                                <div class="col-lg-6 col-12 my-1">
+                                    <div class="text-start"><img src="images/humid.png"> Humidity: <span class="humid-value text-primary"></span></div>
+                                </div>
+                                <div class="col-lg-6 col-12 my-1">
+                                    <div class="text-start"><img src="images/sunrise.png">Sunrise: <span class="sunrise-time text-primary"></span></div>
+                                </div>
+                                <div class="col-lg-6 col-12 my-1">
+                                    <div class="text-start"><img src="images/sunset.png">Sunset: <span class=" sunset-time text-primary"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
+    </div>
 </body>
 
 </html>

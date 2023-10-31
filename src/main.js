@@ -50,6 +50,8 @@ const refreshBtn = document.querySelector(".refresh");
 const windValue = document.querySelector(".wind-value");
 const humidValue = document.querySelector(".humid-value");
 const weatherIcon = document.querySelector(".weather-icon");
+const highlowValue = document.querySelector(".high-low-value");
+const feelsLike = document.querySelector(".feels-value");
 const sunriseT = document.querySelector(".sunrise-time");
 const sunsetT = document.querySelector(".sunset-time");
 const apiKey = "077dd367c6a0acb81c8216125b655788";
@@ -67,6 +69,8 @@ function checkWeather() {
         currentTime.textContent = `Last Updated: ` + timeRightNow.toLocaleTimeString();
         windValue.textContent = `${data.wind.speed} mph`;
         humidValue.textContent = `${data.main.humidity}%`;
+        feelsLike.textContent = `${data.main["feels_like"]}°F`;
+        highlowValue.textContent = `${Math.round(data.main["temp_max"])}°F / ${Math.round(data.main["temp_min"])}°F`;
         weatherIcon.setAttribute("src", `images/${data.weather[0].icon}.png`);
         let sunriseUnix = data.sys.sunrise;
         let tempToJS = new Date(sunriseUnix * 1000);

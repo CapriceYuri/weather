@@ -1,13 +1,13 @@
 body {
     height: 100vh;
-    background-image: url("./images/skybg.png");
+    background-image: url("/images/skybg.png");
     background-repeat: no-repeat;
     background-size: cover;
     font-family: monospace;
 }
 
 .card {
-    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+    background-image: linear-gradient(to left, #708ad7 0%, #efe9f4 75%);
     backdrop-filter: blur(20px);
     border-color: #FF8C00;
 }
@@ -15,4 +15,8 @@ body {
 .card-header,
 .card-footer {
     background-color: rgba(0, 0, 0, 0);
+}
+
+.currentTemp {
+    font-size: 3.5rem;
 }
