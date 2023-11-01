@@ -91,8 +91,8 @@ async function checkWeather() {
     let tempToJS2 = new Date(sunsetUnix * 1000);
     let finalized2 = tempToJS2.toLocaleString();
 
-    sunriseT.textContent = `${finalized.substring(11, 16)} ${finalized.substring(20)}`;
-    sunsetT.textContent = `${finalized2.substring(11, 16)} ${finalized.substring(20)}`;
+    sunriseT.textContent = `${finalized.substring(11, 15)} ${finalized.substring(19, 21)}`;
+    sunsetT.textContent = `${finalized2.substring(11, 15)} ${finalized.substring(19, 21)}`;
     // sunsetT.textContent = (data.sys.sunset).toLocaleTimeString();
 }
 
