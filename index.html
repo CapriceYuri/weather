@@ -21,10 +21,15 @@
                     <div class="h1 fw-bold currentLocation"></div>
                     <span class="currentTime2 text-secondary"></span>
                 </div>
+
                 <div class="card-body">
                     <div class="d-flex justify-content-evenly align-items-center">
                         <div class="currentTemp text-primary mb-0 text-center"></div>
-                        <div><img class="weather-icon" width="108px" height="auto"></div>
+                        <div class="d-flex flex-column">
+                            <div><img class="weather-icon" width="108px" height="auto">
+                            </div>
+                            <div class="weather-des"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="card-footer text-body-secondary w-75 mx-auto">
@@ -33,37 +38,39 @@
                 </div>
             </div>
 
-            <!-- Secondary Content -->
-            <div class="container mt-4">
-                <div class="card rounded-4 mx-auto text-center">
-                    <div class="card-header fst-italic">Weather Summary:</div>
-                    <div class="card-body">
-                        <div>
-                            <div class="row">
-                                <div class="col-lg-6 col-12 my-1">
-                                    <div class="text-start"><img src="images/HL.png"> High/Low: <span class=" high-low-value text-primary"></span></div>
-                                </div>
-                                <div class="col-lg-6 col-12 my-1">
-                                    <div class="text-start"><img src="images/feel.png"> Feels Like: <span class=" feels-value text-primary"></span></div>
-                                </div>
-                                <div class="col-lg-6 col-12 my-1">
-                                    <div class="text-start"><img src="images/wind.png"> Wind: <span class="wind-value text-primary"></span></div>
-                                </div>
-                                <div class="col-lg-6 col-12 my-1">
-                                    <div class="text-start"><img src="images/humid.png"> Humidity: <span class="humid-value text-primary"></span></div>
-                                </div>
-                                <div class="col-lg-6 col-12 my-1">
-                                    <div class="text-start"><img src="images/sunrise.png">Sunrise: <span class="sunrise-time text-primary"></span></div>
-                                </div>
-                                <div class="col-lg-6 col-12 my-1">
-                                    <div class="text-start"><img src="images/sunset.png">Sunset: <span class=" sunset-time text-primary"></span></div>
-                                </div>
+        </div>
+
+        <!-- Secondary Content -->
+        <div class="container mt-4">
+            <div class="card rounded-4 mx-auto text-center">
+                <div class="card-header fst-italic">Weather Summary:</div>
+                <div class="card-body">
+                    <div>
+                        <div class="row">
+                            <div class="col-lg-6 col-12 my-1">
+                                <div class="text-start"><img src="images/HL.png"> High/Low: <span class=" high-low-value text-primary"></span></div>
+                            </div>
+                            <div class="col-lg-6 col-12 my-1">
+                                <div class="text-start"><img src="images/feel.png"> Feels Like: <span class=" feels-value text-primary"></span></div>
+                            </div>
+                            <div class="col-lg-6 col-12 my-1">
+                                <div class="text-start"><img src="images/wind.png"> Wind: <span class="wind-value text-primary"></span></div>
+                            </div>
+                            <div class="col-lg-6 col-12 my-1">
+                                <div class="text-start"><img src="images/humid.png"> Humidity: <span class="humid-value text-primary"></span></div>
+                            </div>
+                            <div class="col-lg-6 col-12 my-1">
+                                <div class="text-start"><img src="images/sunrise.png">Sunrise: <span class="sunrise-time text-primary"></span></div>
+                            </div>
+                            <div class="col-lg-6 col-12 my-1">
+                                <div class="text-start"><img src="images/sunset.png">Sunset: <span class=" sunset-time text-primary"></span></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </body>
 

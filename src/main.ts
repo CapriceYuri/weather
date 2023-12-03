@@ -45,6 +45,7 @@ const currentLocation = document.querySelector(".currentLocation") as HTMLLIElem
 const currentTemp = document.querySelector(".currentTemp") as HTMLElement;
 const currentTime = document.querySelector(".currentTime") as HTMLElement;
 const refreshBtn = document.querySelector(".refresh");
+const weather_description = document.querySelector(".weather-des") as HTMLElement;
 
 // Data Entry
 const windValue = document.querySelector(".wind-value") as HTMLElement;
@@ -82,6 +83,7 @@ async function checkWeather() {
     highlowValue.textContent = `${Math.round(data.main["temp_max"])}°F / ${Math.round(data.main["temp_min"])}°F`
 
     weatherIcon.setAttribute("src", `images/${data.weather[0].icon}.png`)
+    weather_description.textContent = `${data.weather[0].main} / ${data.weather[0].description}`;
 
     let sunriseUnix = data.sys.sunrise;
     let tempToJS = new Date(sunriseUnix * 1000);

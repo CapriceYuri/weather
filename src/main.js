@@ -46,6 +46,7 @@ const currentLocation = document.querySelector(".currentLocation");
 const currentTemp = document.querySelector(".currentTemp");
 const currentTime = document.querySelector(".currentTime");
 const refreshBtn = document.querySelector(".refresh");
+const weather_description = document.querySelector(".weather-des");
 // Data Entry
 const windValue = document.querySelector(".wind-value");
 const humidValue = document.querySelector(".humid-value");
@@ -72,6 +73,7 @@ function checkWeather() {
         feelsLike.textContent = `${data.main["feels_like"]}°F`;
         highlowValue.textContent = `${Math.round(data.main["temp_max"])}°F / ${Math.round(data.main["temp_min"])}°F`;
         weatherIcon.setAttribute("src", `images/${data.weather[0].icon}.png`);
+        weather_description.textContent = `${data.weather[0].main} / ${data.weather[0].description}`;
         let sunriseUnix = data.sys.sunrise;
         let tempToJS = new Date(sunriseUnix * 1000);
         let finalized = tempToJS.toLocaleString();
